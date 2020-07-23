@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe';
+import RecipeList from './RecipeList';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 const App = () => {
@@ -46,6 +48,7 @@ const App = () => {
         </button>
       </form>
       <div className="recipes">
+        <RecipeList recipes={recipes}/>
         {recipes.map(recipe => (
           <Recipe
             title={recipe.recipe.label}
