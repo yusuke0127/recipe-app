@@ -47,18 +47,7 @@ const App = () => {
             Search
           </button>
         </form>
-        <div className="recipes">
           <RecipeList recipes={recipes} />
-          {recipes.map(recipe => (
-            <Recipe
-              title={recipe.recipe.label}
-              calories={recipe.recipe.calories}
-              image={recipe.recipe.image}
-              ingredients={recipe.recipe.ingredients}
-              key={recipe.recipe.label}
-            />
-          ))}
-        </div>
       </div>
     </Router>
   );

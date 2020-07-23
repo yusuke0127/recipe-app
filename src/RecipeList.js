@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Recipe from './Recipe';
 
 const RecipeList = ({recipes}) => {
   return(
-    <div>
-      <h1>Recipe list</h1>
+    <div className="recipes">
       <ul>
         {recipes.map(recipe => (
-          <li>{recipe.recipe.label}</li>
+          <Recipe recipe={recipe.recipe} />
         ))}
       </ul>
     </div>
